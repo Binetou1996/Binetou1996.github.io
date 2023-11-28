@@ -51,42 +51,37 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Style des images */
+/* Style des images *//* Style global des images */
 img {
-    max-width: 100%; /* Assurez-vous que les images ne dépassent pas la largeur de leur conteneur */
-    height: auto; /* Permet aux images de conserver leur ratio hauteur/largeur */
-    display: block; /* Élimine l'espace sous les images */
-    margin: 10px auto; /* Ajoute de la marge autour des images et les centre horizontalement */
+    max-width: 60%; /* Réduit la taille des autres images */
+    height: auto;
+    display: block;
+    margin: 10px auto;
 }
-
-/* Style spécifique pour certaines images */
-img[src="images/daramic.png"] {
-    max-width: 476px;
-    height: 106px;
-}
-
-img[src="images/merck.jpg"] {
-    max-width: 1280px;
-    height: 720px;
-}
-
-img[src="images/faurecia.png"] {
-    max-width: 900px;
-    height: 500px;
-}
-
-img[src="images/awalebiz.png"] {
-    max-width: 990px;
-    height: 750px;
-}
-
-img[src="images/tresor.png"] {
-    max-width: 400px;
-    height: 400px;
-}
-
+/* Style spécifique pour l'image de profil */
 img[src="images/profil.jpg"] {
-    max-width: 4000px;
-    height: auto; /* Ajustez la hauteur en fonction de la largeur */
+    max-width: 150px; /* Taille réduite pour le profil */
+    height: 150px;
+    border-radius: 50%; /* Rend l'image circulaire */
+    display: block;
+    margin: 10px 0 10px 10px; /* Marge pour aligner à gauche */
+    float: left; /* Aligner l'image à gauche */
 }
+/* Ajouter un style pour effacer le flottement après l'image de profil */
+.section-after-profile { /* Remplacez par la classe/id réel de la section suivante */
+    clear: both;
+}
+/* Règle spécifique pour l'image daramic.png */
+img[src="images/daramic.png"] {
+    max-width: 190px; /* ou les dimensions souhaitées */
+    height: 106px; /* ou les dimensions souhaitées */
+}
+/* Règle pour les autres images */
+img:not([src="images/profil.jpg"]):not([src="images/daramic.png"]) {
+    max-width: 476px; /* Même largeur que daramic.png */
+    height: 106px; /* Même hauteur que daramic.png */
+    display: block;
+    margin: 10px auto;
+}
+
 
